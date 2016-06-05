@@ -1,0 +1,136 @@
+/* Copyright 2016 Paskal Ferry.
+*
+* This file is part of the Dark-Aurora GTK theme.
+*
+* The Dark-Aurora GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Dark-Aurora GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Dark-Aurora GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/* Fallback Mode Panel */
+PanelWidget :backdrop,
+PanelApplet :backdrop,
+PanelToplevel :backdrop,
+PanelWidget,
+PanelApplet,
+PanelToplevel {
+    border-image: none;
+
+    color: @dark_fg_color;
+}
+
+PanelWidget,
+PanelApplet,
+PanelToplevel {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 1.0)),
+                                     to (shade (@dark_bg_color, 1.0)));
+}
+
+PanelApplet {
+    border-width: 0;
+}
+
+PanelSeparator:backdrop,
+PanelSeparator {
+    border-width: 0;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 1.0)),
+                                     to (shade (@dark_bg_color, 1.0)));
+
+    color: @dark_fg_color;
+}
+
+.gnome-panel-menu-bar,
+PanelApplet > GtkMenuBar.menubar,
+PanelApplet > GtkMenuBar.menubar.menuitem,
+PanelMenuBar.menubar,
+PanelMenuBar.menubar.menuitem {
+    -PanelMenuBar-icon-visible: true;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 1.0)),
+                                     to (shade (@dark_bg_color, 1.0)));
+}
+
+PanelAppletFrame { 
+    background-color: @dark_bg_color;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 1.0)),
+                                     to (shade (@dark_bg_color, 1.0)));
+    border-width: 0;
+}
+
+PanelApplet .button:backdrop,
+PanelApplet .button {
+    -GtkButton-inner-border: 2;
+
+    border-image: none;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 1.5)),
+                                     to (shade (@dark_bg_color, 1.05)));
+    border-color: alpha (shade (@dark_bg_color, 1.0), 0.6);
+    border-left-color: alpha (shade (@dark_bg_color, 1.5), 0.3);
+    border-radius: 0;
+    border-width: 0 1px 0 1px;
+
+    color: @dark_fg_color;
+    text-shadow: none;
+}
+
+PanelApplet .button:active:prelight:backdrop,
+PanelApplet .button:active:prelight,
+PanelApplet .button:active:backdrop,
+PanelApplet .button:active {
+    border-image: none;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 0.85)),
+                                     to (shade (@dark_bg_color, 1.0))); 
+    border-color: shade (@dark_bg_color, 0.9);
+}
+
+PanelApplet .button:prelight:backdrop,
+PanelApplet .button:prelight {
+    border-image: none;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 1.7)),
+                                     to (shade (@dark_bg_color, 1.25)));
+    border-color: alpha (shade (@dark_bg_color, 1.0), 0.6);
+    border-left-color: alpha (shade (@dark_bg_color, 1.5), 0.4);
+}
+
+PanelApplet .button:checked {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 0.95)),
+                                     to (shade (@dark_bg_color, 1.1)));
+}
+
+PanelApplet .button:checked:prelight {
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 1.15)),
+                                     to (shade (@dark_bg_color, 1.3)));
+}
+
+PanelApplet .button:checked:prelight:active {
+    border-image: none;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (@dark_bg_color, 0.75)),
+                                     to (shade (@dark_bg_color, 0.9))); 
+    border-color: shade (@dark_bg_color, 0.8);
+}
+
+ClockBox {
+    text-shadow: 0 -1px shade (@dark_bg_color, 0.6);
+}
+
+WnckPager, WnckTasklist {
+    background-color: @dark_bg_color;
+}

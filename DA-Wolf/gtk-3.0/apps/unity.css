@@ -1,0 +1,146 @@
+/* Copyright 2016 Paskal Ferry.
+*
+* This file is part of the Dark-Aurora GTK theme.
+*
+* The Dark-Aurora GTK theme is free software: you can redistribute it
+* and/or modify it under the terms of the GNU General Public License as
+* published by the Free Software Foundation, either version 3 of the
+* License, or (at your option) any later version.
+*
+* The Dark-Aurora GTK theme is distributed in the hope that it will be
+* useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+* Public License for more details.
+*
+* You should have received a copy of the GNU General Public License along
+* with the Dark-Aurora GTK theme. If not, see http://www.gnu.org/licenses/.
+*/
+
+/*********************
+ * Unity Decorations *
+ *********************/
+
+UnityDecoration {
+
+    -UnityDecoration-extents: 28px 0 0 0;
+    -UnityDecoration-input-extents: 10px;
+
+    -UnityDecoration-shadow-offset-x: 1px;
+    -UnityDecoration-shadow-offset-y: 5px;
+    -UnityDecoration-active-shadow-color: rgba (60, 60, 60, 0.5);
+    -UnityDecoration-active-shadow-radius: 30px;
+    -UnityDecoration-inactive-shadow-color: rgba (60, 60, 60, 0.3);
+    -UnityDecoration-inactive-shadow-radius: 25px;
+
+    -UnityDecoration-glow-size: 10px;
+    -UnityDecoration-glow-color: rgb (163, 163, 163);
+
+    -UnityDecoration-title-indent: 10px;
+    -UnityDecoration-title-fade: 35px;
+    -UnityDecoration-title-alignment: 0.5;
+}
+
+UnityDecoration.top {
+    padding: 0 6px 0 6px;
+    border: 0px solid alpha(@dark_bg_color,0.7);
+    border-bottom-width: 0px;
+    border-radius: 1px 1px 0 0;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (alpha (@dark_bg_color, 1.0)),
+                                     to (alpha (@dark_bg_color, 1.0)));
+    background-color: transparent;
+    color: @dark_fg_color;
+}
+
+UnityDecoration.top.menuitem {
+    color: @dark_fg_color;
+}
+
+UnityDecoration.top:backdrop {
+    padding: 0 6px 0 6px;
+    border: 0px solid alpha(@dark_bg_color,0.7);
+    border-bottom-width: 0px;
+    border-radius: 1px 1px 0 0;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (alpha (@dark_bg_color, 1.0)),
+                                     to (alpha (@dark_bg_color, 1.0)));
+    background-color: transparent;
+    color: #cbcbcb;
+}
+
+UnityDecoration.left,
+UnityDecoration.right {
+                                     
+}
+
+UnityDecoration.bottom {
+    
+}
+
+UnityDecoration.left:backdrop,
+UnityDecoration.right:backdrop,
+UnityDecoration.bottom:backdrop {
+    
+}
+
+/***************
+ * Unity Panel *
+ ***************/
+
+UnityPanelWidget,
+.unity-panel {
+    border-bottom: 1px solid shade(@dark_bg_color,0.99);
+    background-color: @dark_bg_color;
+    background-image: none;
+    color: @dark_fg_color;
+
+}
+
+.unity-panel.menuitem,
+.unity-panel .menuitem {
+    border-width: 0 1px;
+    color: @dark_fg_color;
+}
+
+.unity-panel.menubar,
+.unity-panel .menubar {
+}
+
+.unity-panel.menubar:backdrop,
+.unity-panel .menubar *:backdrop {
+    color: @dark_fg_color;
+}
+
+.unity-panel.menubar.menuitem,
+.unity-panel.menubar .menuitem {
+    padding: 3px 5px;
+    border-width: 1px;
+    border-style: solid;
+    border: 1px solid transparent;
+    background-color: transparent;
+    background-image: none;
+    color: @dark_fg_color;
+}
+
+.unity-panel.menubar.menuitem:hover,
+.unity-panel.menubar .menuitem:hover {
+    border-radius: 4px 4px 0px 0px;
+    border-bottom: 0px;
+    border: 1px solid shade(@dark_bg_color, 0.7);
+    background-color: shade(@dark_bg_color, 0.8);
+    color: white;
+}
+
+.unity-panel.menubar .menuitem *:hover {
+    color: white;
+}
+
+.unity-panel.menubar .menuitem.separator,
+.unity-panel.menubar.menuitem.separator {
+    -GtkMenuItem-horizontal-padding: 0;
+    -GtkWidget-separator-height: 1;
+    border: none;
+    color: @dark_fg_color;
+}
+
+
